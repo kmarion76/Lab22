@@ -1,0 +1,52 @@
+﻿@model IEnumerable<MovieViewModel>
+@{
+    
+}
+<p>
+    <a asp-action="Registration"> Register a Movie Here</a>
+
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Genre)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Actors)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Directors)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>
+                @Html.DisplayFor(x => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(x => item.Genre)
+            </td>
+            <td>
+                @Html.DisplayFor(x => item.Year)
+            </td>
+            <td>
+                @Html.DisplayFor(x => item.Actors)
+            </td>
+            <td>
+                @Html.DisplayFor(x => item.Directors)
+            </td>
+        </tr>}
+    </tbody>
+</table>
+
+
